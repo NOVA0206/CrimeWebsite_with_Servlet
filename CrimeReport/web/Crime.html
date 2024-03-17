@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+        margin:0;
+        padding:0;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        cursor: pointer;
+        background-color: black;
+        background-blend-mode: darken;
+        background-size: cover;
+    }
+    .nav-list {
+        width: 70%;
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+    }
+    .logo img {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+    }
+    .nav-list li {
+        list-style: none;
+        padding: 26px 30px;
+    }
+    .nav-list li a {
+        text-decoration: none;
+        color: white;
+    }
+    .nav-list li a:hover {
+        color: rgb(84, 84, 84);
+    }
+    .rightnav {
+        width: 30%;
+        text-align: right;
+    }
+    #search {
+        padding: 5px;
+        font-size: 17px;
+        border: 2px solid grey;
+        border-radius: 9px;
+    }
+        .context{
+            display: flex;
+            position: fixed;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("https://i.pinimg.com/564x/3e/36/f2/3e36f29428a331ee48a7005fd30685cd.jpg");
+            background-size: 112%
+        }
+        button {
+background-color: #04AA6D;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .text-footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            color: white;
+        }
+        </style>
+    </head>
+    <body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li>
+            <div class="logo">
+                <a href="index.html"><img src= "https://i.pinimg.com/564x/03/1e/4b/031e4bef4930fbc343cdf864d5a0f2e1.jpg" alt="Pitcure file" width=300 height=200></a>
+            </div></li>
+            <li><a href="About.html">ABOUT US</a></li>
+            <li><a href="Crime.html">CRIME</a></li>
+            <li><a href="Contact.html">CONTACT US</a></li>
+            <li><a href="Login.html">LOGIN</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Criminal Registration Form</h2>
+        <form action="CrimeServlet" method="post">
+            <label for="name">Criminal's Name:</label>
+            <input type="text" id="name" name="name" placeholder="Criminal'S Name" required>
+            <label for="age">Criminal's Age:</label>
+            <input type="text" id="age" name="age" placeholder="Criminal's Age." required>
+            <label for="crime">Type of Crime:</label>
+            <input type="text" id="crime" name="crime" placeholder="Enter the Crime" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Describe the crime..." required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+         <br>
+         <br>
+       <footer class="text-footer">
+            <p class="">
+                © 2024 Criminal Investigation Department. All rights reserved.
+            </p>
+        </footer>
+    </body>
+</html>

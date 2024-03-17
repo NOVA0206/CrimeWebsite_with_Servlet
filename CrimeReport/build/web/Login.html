@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+        margin:0;
+        padding:0;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        cursor: pointer;
+        background-color: black;
+        background-blend-mode: darken;
+        background-size: cover;
+    }
+    .nav-list {
+        width: 70%;
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+    }
+    .logo img {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+    }
+    .nav-list li {
+        list-style: none;
+        padding: 26px 30px;
+    }
+    .nav-list li a {
+        text-decoration: none;
+        color: white;
+    }
+    .nav-list li a:hover {
+        color: rgb(84, 84, 84);
+    }
+    .rightnav {
+        width: 30%;
+        text-align: right;
+    }
+    #search {
+        padding: 5px;
+        font-size: 17px;
+        border: 2px solid grey;
+        border-radius: 9px;
+    }
+        .context{
+            display: flex;
+            position: fixed;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("https://i.pinimg.com/564x/3e/36/f2/3e36f29428a331ee48a7005fd30685cd.jpg");
+            background-size: 112%
+        }
+        input[type=text], input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+background-color: #04AA6D;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+
+button:hover {
+opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+width: auto;
+padding: 10px 18px;
+background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+text-align: center;
+margin: 24px 0 12px 0;
+position: relative;
+}
+
+img.avatar {
+width: 40%;
+border-radius: 50%;
+}
+
+.container {
+padding: 16px;
+}
+
+span.psw {
+float: right;
+padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+position: absolute;
+right: 25px;
+top: 0;
+color: #000;
+font-size: 35px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: red;
+cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+-webkit-animation: animatezoom 0.6s;
+animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+from {-webkit-transform: scale(0)}
+to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+from {transform: scale(0)}
+to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+span.psw {
+display: block;
+float: none;
+}
+.cancelbtn {
+width: 100%;
+}
+}
+        .text-footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            color: white;
+        }
+        </style>
+    </head>
+    <body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li>
+            <div class="logo">
+                <a href="index.html"><img src= "https://i.pinimg.com/564x/03/1e/4b/031e4bef4930fbc343cdf864d5a0f2e1.jpg" alt="Pitcure file" width=300 height=200></a>
+            </div></li>
+            <li><a href="About.html">ABOUT US</a></li>
+            <li><a href="Crime.html">CRIME</a></li>
+            <li><a href="Contact.html">CONTACT US</a></li>
+            <li><a href="Login.html">LOGIN</a></li>
+        </ul>
+    </nav>
+        <br>
+        <br>
+    <center><img src="https://i.pinimg.com/564x/5d/a1/e5/5da1e519959c5bde1081d1328c22b707.jpg" style="height: 290px"></center>
+        <br>
+<center><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></center>
+
+<div id="id01" class="modal">
+<form class="modal-content animate" action="LoginServlet" method="post">
+    <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="https://i.pinimg.com/564x/bc/60/45/bc60456ce3155439e9527d6801aef3d0.jpg" alt="Login" class="avatar">
+    </div>
+
+    <div class="container">
+        <label><b>First Name</b></label>
+        <input type="text" placeholder="Enter your first name" name="firstname" required>
+        <label><b>Last Name</b></label>
+        <input type="text" placeholder="Enter your last name" name="lastname" required>
+        <label><b>Contact no.</b></label>
+        <input type="text" placeholder="Enter your Contact No." name="contactno" required>
+        <label><b>Email</b></label>
+        <input type="text" placeholder="Enter your Email" name="emailid1" required>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <button type="submit">Login</button>
+        <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+    </form>
+</div>
+         <br>
+         <br>
+       <footer class="text-footer">
+            <p class="">
+                © 2024 Criminal Investigation Department. All rights reserved.
+            </p>
+        </footer>
+         <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+    </body>
+</html>
